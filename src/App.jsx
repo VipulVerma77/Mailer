@@ -7,7 +7,6 @@ function App() {
   return (
     <Router>
       <Navbar />
-     
       <Routes>
         <Route path="/" element={<Home />} />
          <Route path="/about" element={<AboutSection />} />
@@ -19,7 +18,7 @@ function App() {
         <Route path="/testimonial" element={<Testimonial />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/not-found" element={<NotFound />} />
+        
         <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </Router>
