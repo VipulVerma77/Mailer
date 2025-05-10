@@ -7,13 +7,13 @@ import { CustomButton } from '../components';
 const services = [
   {
     title: 'Pay In',
-    icon: <FaMailBulk className="text-blue-500 text-5xl" />,
+    icon: <FaMailBulk className="text-pink-500 text-5xl" />,
     description:
       'Enable your business to receive payments through UPI and wallets with lightning-fast and top-tier security. Perfect for websites, apps, and eCommerce platforms.',
   },
   {
     title: 'Pay Out',
-    icon: <FaThumbsUp className="text-blue-500 text-5xl" />,
+    icon: <FaThumbsUp className="text-pink-500 text-5xl" />,
     description:
       'Automate bulk transfers, vendor payouts, refunds, commissions, and more—directly to bank accounts or wallets, anytime, anywhere instantly.',
   },
@@ -39,13 +39,13 @@ export default function Service() {
               key={index}
               className="bg-white text-center rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="bg-gray-100 rounded-full p-6 inline-block mb-4">
+              <div className="bg-gray-100 rounded-full  p-6 inline-block mb-4">
                 {service.icon}
               </div>
               <h4 className="text-xl font-semibold mb-4">{service.title}</h4>
               <p className="text-gray-600 mb-4">{service.description}</p>
               <CustomButton
-                    to="/service"
+                    to={service.title === "Pay In" ? '/payin':'/payout'}
                     label="Read More"
                     variant="outline"
                     size="medium"

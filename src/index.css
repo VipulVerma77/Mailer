@@ -8,6 +8,13 @@
     --gradient: radial-gradient(circle, #e5e5e5 0%, #fff 100%);
 }
 
+.form-input {
+  @apply bg-white text-pink-600 placeholder-pink-400 border border-gray-300 rounded-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-pink-500 focus:border-pink-500;
+}
+.icon-container {
+  @apply text-3xl sm:text-4xl md:text-4xl lg:text-5xl;
+}
+
 html,
 body {
     width: 100dvw;
@@ -21,6 +28,61 @@ body {
 section {
     width: 100dvw;
 }
+
+.sparkle-border {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.sparkle-border::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 182, 193, 0.5),  /* light pink */
+    rgba(219, 39, 119, 0.6),   /* dark pink */
+    transparent
+  );
+  z-index: 1;
+  animation: sparkle 3s linear infinite;
+  border-radius: 1rem; /* matches rounded-xl */
+  pointer-events: none;
+}
+
+/* Add this to your index.css or Tailwind styles */
+
+
+@keyframes sparkle {
+  0% {
+    transform: translateX(-100%) translateY(-100%);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%);
+  }
+}
+
+
+
+@keyframes borderMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-border {
+  background-size: 200% 200%;
+  animation: borderMove 3s linear infinite;
+}
+
 
 @keyframes fadeInUp {
   from {

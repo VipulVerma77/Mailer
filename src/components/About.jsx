@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { about } from "../assets";
+import CustomButton from "./CustomButton";
 export default function About() {
   return (
     <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 md:py-24 max-w-7xl mx-auto">
@@ -24,9 +25,13 @@ export default function About() {
 <br/>
 Whether you're running an eCommerce store, mobile app, subscription platform, or retail outlet, our solutions are built to handle scale, speed, and security—all without friction.  
         </p>
-        <button className="mt-6 px-6 py-3 bg-pink-500 hover:bg-pink-600 text-white rounded-full text-lg font-medium">
-          About More
-        </button>
+         <CustomButton
+                    to="/about"
+                    label="Read More"
+                    variant="outline"
+                    size="medium"
+                    className="rounded-full mt-2"
+                  />
       </div>
     </section>
   );

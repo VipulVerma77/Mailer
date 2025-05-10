@@ -14,8 +14,8 @@ export const navLinks = [
     label: "Services",
     path: "/services",
     items:[
-        { label: "Pay In", path: "/features" },
-        { label: "Pay Out", path: "/features" },
+        { label: "Pay In", path: "/payin" },
+        { label: "Pay Out", path: "/payout" },
     ],
     type: "dropdown"
   },
