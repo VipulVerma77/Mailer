@@ -68,9 +68,9 @@ export default function Home() {
       
 
       {/* Hero Section with higher z-index */}
-      <div className="hero-layout relative">
+      <div className="hero-layout  relative">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col lg:flex-row items-center gap-22">
+          <div className="flex flex-col lg:flex-row  items-center gap-22">
             {/* Text content */}
             <div className="lg:w-1/2 space-y-6 ">
               <Transition
