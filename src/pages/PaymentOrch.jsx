@@ -1,7 +1,7 @@
 import React from 'react'
 import { TopHeader } from '../components'
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
-import { auto, ease } from '../assets'
+import { auto, ease, payo } from '../assets'
 
 const PaymentOrch = () => {
   return (
@@ -27,16 +27,16 @@ const PaymentOrch = () => {
               payment flows, and improve customer satisfaction.
             </p>
 
-            <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:scale-105 transition-all">
+            {/* <button className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg shadow-md hover:bg-blue-700 hover:scale-105 transition-all">
               Learn More
               <ArrowRightIcon className="ml-2 w-5 h-5" />
-            </button>
+            </button> */}
           </div>
 
           {/* Image */}
           <div className="flex justify-center transition-transform transform hover:scale-105 duration-300">
             <img
-              src="https://images.unsplash.com/photo-1605902711622-cfb43c4437d4" // Replace with your image
+              src={payo}// Replace with your image
               alt="Payment orchestration"
               className="rounded-xl shadow-xl object-cover max-h-[400px] transition-all duration-300"
             />

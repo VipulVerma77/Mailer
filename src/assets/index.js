@@ -6,4 +6,5 @@ import auto from './auto.jpg'
 import ease from './ease.jpg'
 import team from './blog-1.png'
 import values from "./values.png"
-export {hero,sty,about,pay,auto,ease,team,values};
+import payo from "./payo.png"
+export {hero,sty,about,pay,auto,ease,team,values,payo};
