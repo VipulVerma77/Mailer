@@ -81,24 +81,28 @@ const PaymentOrch = () => {
         </div>
 
         {/* Animated Timeline or Image Sequence */}
-        <div className="flex flex-col md:flex-row justify-center gap-8 ">
-          <div className="flex justify-center items-center space-x-6">
-            <img
-              src={ease} // Replace with your image
-              alt="Step 1"
-              className="rounded-lg shadow-xl max-w-xs transform hover:scale-105 transition-all duration-500"
-            />
-            <p className="text-gray-700 text-lg">Step 1: Collect Payments with Ease</p>
-          </div>
-          <div className="flex justify-center items-center space-x-6">
-            <img
-              src={auto}// Replace with your image
-              alt="Step 2"
-              className="rounded-lg shadow-xl max-w-xs transform hover:scale-105 transition-all duration-500"
-            />
-            <p className="text-gray-700 text-lg">Step 2: Automate Payouts Seamlessly</p>
-          </div>
-        </div>
+     <div className="flex flex-col md:flex-row justify-center gap-8">
+  {/* Step 1 */}
+  <div className="flex flex-col items-center md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left">
+    <img
+      src={ease}
+      alt="Step 1"
+      className="rounded-lg shadow-xl max-w-xs transform hover:scale-105 transition-all duration-500"
+    />
+    <p className="text-gray-700 text-lg">Step 1: Collect Payments with Ease</p>
+  </div>
+
+  {/* Step 2 */}
+  <div className="flex flex-col items-center md:flex-row md:items-center space-y-4 md:space-y-0 md:space-x-6 text-center md:text-left">
+    <img
+      src={auto}
+      alt="Step 2"
+      className="rounded-lg shadow-xl max-w-xs transform hover:scale-105 transition-all duration-500"
+    />
+    <p className="text-gray-700 text-lg">Step 2: Automate Payouts Seamlessly</p>
+  </div>
+</div>
+
       </section>
     </div>
   )
