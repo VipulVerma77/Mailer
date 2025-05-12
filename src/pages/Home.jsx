@@ -106,7 +106,7 @@ export default function Home() {
               >
                 <div>
                   <CustomButton
-                    to="/get-started"
+                    to="/about"
                     label="Get Started"
                     variant="solid"
                     size="medium"
