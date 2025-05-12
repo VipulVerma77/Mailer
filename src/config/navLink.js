@@ -28,11 +28,6 @@ export const navLinks = [
 
 export const authLinks = [
   {
-    label: "Log In",
-    path: "/login",
-    variant: "outline"
-  },
-  {
     label: "Register",
     path: "/register",
     variant: "primary"

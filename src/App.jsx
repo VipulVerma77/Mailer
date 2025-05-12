@@ -1,7 +1,7 @@
 // src/App.js
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import { AboutSection, Contact, Home, PayIn, PayOut } from './pages';
+import { AboutSection, Contact, Footer, Home, PayIn, PayOut } from './pages';
 
 function App() {
   return (
@@ -13,14 +13,8 @@ function App() {
         <Route path="/payin" element={<PayIn />} /> 
         <Route path="/contact" element={<Contact />} />
         <Route path="/payout" element={<PayOut />} />
-        {/* <Route path="/pricing" element={<Pricing />} />
-        <Route path="/blog" element={<Blog />} />
-        <Route path="/testimonial" element={<Testimonial />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
-        
-        <Route path="*" element={<NotFound />} /> */}
       </Routes>
+      {/* <Footer/> */}
     </Router>
   );
 }

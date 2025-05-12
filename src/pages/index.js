@@ -4,4 +4,5 @@ import Contact from "./Contact";
 import AboutSection from "./AboutSection";
 import PayIn from "./PayIn";
 import PayOut from './PayOut'
-export{Home,Service,Contact,AboutSection,PayIn,PayOut};
+import Footer from "./Footer";
+export{Home,Service,Contact,AboutSection,PayIn,PayOut,Footer};

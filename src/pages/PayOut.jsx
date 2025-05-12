@@ -1,5 +1,6 @@
 import React from 'react'
 import { TopHeader } from '../components'
+import { pay } from '../assets'
 
 const PayIn = () => {
     return (
@@ -17,7 +18,37 @@ const PayIn = () => {
                     </div>
                 </div>
             </div>
+            <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 md:py-24 max-w-7xl mx-auto">
+                {/* Left Image or Illustration */}
 
+
+                {/* Right Content */}
+                <div className="md:w-1/2 w-full mb-10 md:mb-0 md:pl-12 text-center md:text-left">
+                    <p className="text-pink-500 font-semibold mb-2">The Power of Pay OUT</p>
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                        Disburse Funds Like a Pro with Pay OUT
+                    </h2>
+                    <p className="mt-6 text-gray-600 text-lg">
+                        Say goodbye to manual transfers and payment delays. With Pay OUT, you can distribute funds effortlessly—whether you're paying vendors, refunding customers, or managing bulk payouts.
+                        <br />
+                        <p className='text-2xl mt-2 mb-2 '> 💼 Why Choose Pay OUT?</p>
+
+                        Fast Transfers – Disburse funds instantly to any bank or wallet.<br />
+                        Bulk Payouts – Handle thousands of transactions in a click.<br />
+
+                        Detailed Tracking – Full visibility into every payout.<br />
+                        Automated Workflows – Save time with scheduled or triggered payouts.
+                    </p>
+
+                </div>
+                <div className="md:w-1/2 w-full">
+                    <img
+                        src={pay}// Replace with your image path
+                        alt="Product Tour Illustration"
+                        className="w-full h-auto"
+                    />
+                </div>
+            </section>
 
 
         </>

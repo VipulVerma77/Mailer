@@ -1,5 +1,6 @@
 import React from 'react'
 import { TopHeader } from '../components'
+import { pay } from '../assets'
 
 const PayIn = () => {
     return (
@@ -17,6 +18,38 @@ const PayIn = () => {
                     </div>
                 </div>
             </div>
+
+            <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 md:py-24 max-w-7xl mx-auto">
+                {/* Left Image or Illustration */}
+                <div className="md:w-1/2 w-full">
+                    <img
+                        src={pay}// Replace with your image path
+                        alt="Product Tour Illustration"
+                        className="w-full h-auto"
+                    />
+                </div>
+
+                {/* Right Content */}
+                <div className="md:w-1/2 w-full mb-10 md:mb-0 md:pl-12 text-center md:text-left">
+                    <p className="text-pink-500 font-semibold mb-2">The Power of Pay IN</p>
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                        Unlock Seamless Payments with Pay IN
+                    </h2>
+                    <p className="mt-6 text-gray-600 text-lg">
+                        Discover the strength of smart, secure, and instant payments with Pay IN—your gateway to effortless transactions. Whether you're collecting payments from customers, managing subscriptions, or settling invoices, Pay IN makes it easy.
+                        <br/>
+                       <p className='text-2xl mt-2 mb-2 '> 🚀 Why Choose Pay IN?</p>
+                        
+                        Instant Settlements – Get paid in real-time.<br/>
+                        Trusted Security – Industry-grade encryption and fraud protection.<br/>
+
+                        Simple Integration – Start accepting payments in minutes.<br/>
+
+                        Customizable Workflows – Tailored for your business needs.
+                    </p>
+                
+                </div>
+            </section>
 
         </div>
     )

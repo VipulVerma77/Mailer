@@ -139,8 +139,8 @@ export default function Home() {
     <Service/>
     <Feature/>
     <FAQ/>
-    <Blog/>
-    <Testimonial/>
+    {/* <Blog/>
+    <Testimonial/> */}
     </>
   );
 }
