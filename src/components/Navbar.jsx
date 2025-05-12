@@ -95,7 +95,9 @@ export default function Navbar() {
                 <button
                   key={link.label}
                   onClick={() => setShowRegisterModal(true)}
-                  className="bg-pink-600 text-white px-5 py-2 rounded-lg font-medium hover:bg-pink-700"
+                  className=" px-4 py-2 text-base rounded-full font-medium border border-pink-600 text-pink-600
+      hover:bg-pink-600 hover:text-white
+      transition-all duration-300"
                 >
                   {link.label}
                 </button>
