@@ -97,7 +97,7 @@ export default function Navbar() {
                   onClick={() => setShowRegisterModal(true)}
                   className=" px-4 py-2 text-base rounded-full font-medium border border-pink-600 text-pink-600
       hover:bg-pink-600 hover:text-white
-      transition-all duration-300"
+      transition-all duration-300 cursor-pointer"
                 >
                   {link.label}
                 </button>
