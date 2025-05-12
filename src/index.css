@@ -147,6 +147,7 @@ section {
   100% { transform: translate(0, 0); }
 }
 
+
 /* Apply animations */
 .float-random-1 { animation: float-random-1 25s infinite ease-in-out; }
 .float-random-2 { animation: float-random-2 30s infinite ease-in-out; }

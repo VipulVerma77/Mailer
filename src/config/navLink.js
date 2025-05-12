@@ -11,6 +11,11 @@ export const navLinks = [
     type: "link"
   },
   {
+    label: "Payment Orchestration",
+    path: "/payment",
+    type: "link"
+  },
+  {
     label: "Services",
     path: "/services",
     items:[
