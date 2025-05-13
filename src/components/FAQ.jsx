@@ -1,6 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
-import { about } from "../assets";
+import { about, ques } from "../assets";
 
 const faqs = [
   {
@@ -59,7 +59,7 @@ const FAQ = () => {
 
         <div className="rounded overflow-hidden">
           <img
-            src={about}
+            src={ques}
             alt="FAQ illustration"
             className="w-full h-auto rounded-md shadow-md"
           />

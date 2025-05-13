@@ -1,4 +1,3 @@
-import React from 'react'
 import { TopHeader } from '../components'
 import { pay } from '../assets'
 
