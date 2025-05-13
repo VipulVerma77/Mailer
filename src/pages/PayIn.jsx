@@ -13,7 +13,7 @@ const PayIn = () => {
                             Pay In
                         </h4>
                         <p className="text-gray-600 text-2xl md:text-2xl max-w-4xl mx-auto">
-                            Mailler’s Pay In solution enables your business to seamlessly collect payments through popular methods like UPI and digital wallets. Designed for websites, mobile apps, and eCommerce platforms, it ensures lightning-fast transactions, bank-grade security, and maximum reliability — so your customers enjoy a smooth checkout experience every time.
+                            Pavoyaa’s Pay In solution enables your business to seamlessly collect payments through popular methods like UPI and digital wallets. Designed for websites, mobile apps, and eCommerce platforms, it ensures lightning-fast transactions, bank-grade security, and maximum reliability — so your customers enjoy a smooth checkout experience every time.
                         </p>
                     </div>
                 </div>
@@ -38,7 +38,7 @@ const PayIn = () => {
                     <p className="mt-6 text-gray-600 text-lg">
                         Discover the strength of smart, secure, and instant payments with Pay IN—your gateway to effortless transactions. Whether you're collecting payments from customers, managing subscriptions, or settling invoices, Pay IN makes it easy.
                         <br/>
-                       <p className='text-2xl mt-2 mb-2 '> 🚀 Why Choose Pay IN?</p>
+                       <p className='text-4xl mt-2 mb-2 '> Why Choose Pay IN?</p>
                         
                         Instant Settlements – Get paid in real-time.<br/>
                         Trusted Security – Industry-grade encryption and fraud protection.<br/>

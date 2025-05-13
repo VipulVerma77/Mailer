@@ -4,7 +4,7 @@ import { about } from "../assets";
 import CustomButton from "./CustomButton";
 export default function About() {
   return (
-    <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 md:py-24 max-w-7xl mx-auto">
+    <section className="flex flex-col-reverse md:flex-row items-center justify-between px-6 py-12 md:py-10 max-w-7xl mx-auto">
       {/* Left Image or Illustration */}
       <div className="md:w-1/2 w-full">
         <img

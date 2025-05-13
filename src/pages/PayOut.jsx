@@ -13,7 +13,7 @@ const PayIn = () => {
                             Pay Out
                         </h4>
                         <p className="text-gray-600 text-2xl md:text-2xl max-w-4xl mx-auto">
-                            Mailler’s Pay Out solution simplifies and automates bulk payments like vendor payouts, refunds, commissions, and more. Send funds directly to bank accounts or digital wallets with real-time speed, high security, and complete control. Whether it's one transaction or thousands, Mailler ensures your disbursements are smooth, scalable, and seamless — anytime, anywhere.
+                            Pavoyaa’s Pay Out solution simplifies and automates bulk payments like vendor payouts, refunds, commissions, and more. Send funds directly to bank accounts or digital wallets with real-time speed, high security, and complete control. Whether it's one transaction or thousands, Pavoyaa ensures your disbursements are smooth, scalable, and seamless — anytime, anywhere.
                         </p>
                     </div>
                 </div>

@@ -23,15 +23,14 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`w-full top-0 left-0 z-50 transition-all duration-500 ${
-          isSticky ? 'fixed bg-white shadow-sm py-3' : 'absolute bg-transparent py-5'
-        }`}
+        className={`w-full top-0 left-0 z-50 transition-all duration-500 ${isSticky ? 'fixed bg-white shadow-sm py-3' : 'absolute bg-transparent py-5'
+          }`}
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
           <Link to="/" className="text-2xl font-semibold flex items-center space-x-2">
             <EnvelopeIcon className="w-6 h-6 md:w-10 md:h-20 text-pink-600" />
             <span className="text-pink-600 font-extrabold text-[calc(1.375rem+1.5vw)] leading-tight">
-              Mailler
+              Pavoyaa
             </span>
           </Link>
 
@@ -42,9 +41,8 @@ export default function Navbar() {
                   <Link
                     key={item.label}
                     to={item.path}
-                    className={`text-base font-normal transition-colors duration-500 ${
-                      isSticky ? 'py-2' : 'py-4'
-                    } text-gray-800 hover:text-pink-600`}
+                    className={`text-base font-normal transition-colors duration-500 ${isSticky ? 'py-2' : 'py-4'
+                      } text-gray-800 hover:text-pink-600`}
                   >
                     {item.label}
                   </Link>
@@ -58,17 +56,15 @@ export default function Navbar() {
                     onMouseLeave={() => setDropdownOpen(false)}
                   >
                     <button
-                      className={`flex items-center text-base font-normal transition-all duration-500 ${
-                        isSticky ? 'py-2' : 'py-4'
-                      } text-gray-800 hover:text-pink-600`}
+                      className={`flex items-center text-base font-normal transition-all duration-500 ${isSticky ? 'py-2' : 'py-4'
+                        } text-gray-800 hover:text-pink-600`}
                     >
                       {item.label}
                       <ChevronDownIcon className="ml-2 w-3 h-3" />
                     </button>
                     <div
-                      className={`absolute top-full left-0 mt-2 w-44 bg-white rounded-lg shadow-md transform transition-all duration-500 origin-top ${
-                        dropdownOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'
-                      }`}
+                      className={`absolute top-full left-0 mt-2 w-44 bg-white rounded-lg shadow-md transform transition-all duration-500 origin-top ${dropdownOpen ? 'scale-y-100 opacity-100' : 'scale-y-0 opacity-0'
+                        }`}
                     >
                       {item.items.map((subItem) => (
                         <Link
@@ -201,59 +197,59 @@ export default function Navbar() {
       </header>
 
       <Transition appear show={showRegisterModal} as={Fragment}>
-  <Dialog as="div" className="relative z-50" onClose={() => setShowRegisterModal(false)}>
-    <Transition.Child
-      as="div"  // Use "div" instead of Fragment here
-      enter="ease-out duration-300"
-      enterFrom="opacity-0"
-      enterTo="opacity-100"
-      leave="ease-in duration-200"
-      leaveFrom="opacity-100"
-      leaveTo="opacity-0"
-    >
-      <div className="fixed inset-0 bg-white/10 backdrop-blur-sm " /> {/* Set the background to transparent */}
-    </Transition.Child>
+        <Dialog as="div" className="relative z-50" onClose={() => setShowRegisterModal(false)}>
+          <Transition.Child
+            as="div"  // Use "div" instead of Fragment here
+            enter="ease-out duration-300"
+            enterFrom="opacity-0"
+            enterTo="opacity-100"
+            leave="ease-in duration-200"
+            leaveFrom="opacity-100"
+            leaveTo="opacity-0"
+          >
+            <div className="fixed inset-0 bg-white/10 backdrop-blur-sm " /> {/* Set the background to transparent */}
+          </Transition.Child>
 
-    <div className="fixed inset-0 overflow-y-auto">
-      <div className="flex min-h-full items-center justify-center  p-4">
-        <Transition.Child
-          as="div"  // Again use "div" instead of Fragment here
-          enter="ease-out duration-300"
-          enterFrom="opacity-0 scale-95"
-          enterTo="opacity-100 scale-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100 scale-100"
-          leaveTo="opacity-0 scale-95"
-        >
-          <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-pink-100 p-6 text-left align-middle shadow-xl transition-all ">
-            <Dialog.Title className="text-lg text-center font-medium leading-6 text-pink-600">
-              Register With Us
-            </Dialog.Title>
-            <form className="mt-4 space-y-4">
-              <input type="text" placeholder="Name" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
-              <input type="tel" placeholder="Phone" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
-              <input type="email" placeholder="Email" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
-              <input type="text" placeholder="Company Name" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
-              <button
-                type="submit"
-                className="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700"
+          <div className="fixed inset-0 overflow-y-auto">
+            <div className="flex min-h-full items-center justify-center  p-4">
+              <Transition.Child
+                as="div"  // Again use "div" instead of Fragment here
+                enter="ease-out duration-300"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
+                leave="ease-in duration-200"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
               >
-                Submit
-              </button>
-              <button
-                type="button"
-                className="w-full border border-gray-300 text-gray-600 py-2 rounded-md hover:bg-gray-100"
-                onClick={() => setShowRegisterModal(false)}
-              >
-                Cancel
-              </button>
-            </form>
-          </Dialog.Panel>
-        </Transition.Child>
-      </div>
-    </div>
-  </Dialog>
-</Transition>
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-pink-100 p-6 text-left align-middle shadow-xl transition-all ">
+                  <Dialog.Title className="text-lg text-center font-medium leading-6 text-pink-600">
+                    Register With Us
+                  </Dialog.Title>
+                  <form className="mt-4 space-y-4">
+                    <input type="text" placeholder="Name" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
+                    <input type="tel" placeholder="Phone" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
+                    <input type="email" placeholder="Email" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
+                    <input type="text" placeholder="Company Name" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
+                    <button
+                      type="submit"
+                      className="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700"
+                    >
+                      Submit
+                    </button>
+                    <button
+                      type="button"
+                      className="w-full border border-gray-300 text-gray-600 py-2 rounded-md hover:bg-gray-100"
+                      onClick={() => setShowRegisterModal(false)}
+                    >
+                      Cancel
+                    </button>
+                  </form>
+                </Dialog.Panel>
+              </Transition.Child>
+            </div>
+          </div>
+        </Dialog>
+      </Transition>
 
 
     </>

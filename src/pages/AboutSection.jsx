@@ -11,7 +11,7 @@ const AboutSection = () => {
       />
 
       {/* Hero Section */}
-      <div className="overflow-hidden py-20 mt-20 bg-white">
+      <div className="overflow-hidden py-10 mt-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Image Section */}
@@ -106,7 +106,7 @@ const AboutSection = () => {
             Effortless Payments. Unlimited Growth.
           </h4>
           <p className="text-gray-600 text-2xl max-w-4xl mx-auto">
-            Mailler simplifies and secures your payment management, empowering
+            Pavoyaa simplifies and secures your payment management, empowering
             your business to grow without boundaries. Our adaptable solutions
             are designed to meet your needs today and scale effortlessly with
             your ambitions for tomorrow.
