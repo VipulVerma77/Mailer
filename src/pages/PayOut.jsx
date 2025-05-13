@@ -31,7 +31,7 @@ const PayIn = () => {
                     <p className="mt-6 text-gray-600 text-lg">
                         Say goodbye to manual transfers and payment delays. With Pay OUT, you can distribute funds effortlessly—whether you're paying vendors, refunding customers, or managing bulk payouts.
                         <br />
-                        <p className='text-2xl mt-2 mb-2 '> 💼 Why Choose Pay OUT?</p>
+                        <p className='text-3xl mt-2 mb-2 '> Why Choose Pay OUT?</p>
 
                         Fast Transfers – Disburse funds instantly to any bank or wallet.<br />
                         Bulk Payouts – Handle thousands of transactions in a click.<br />
