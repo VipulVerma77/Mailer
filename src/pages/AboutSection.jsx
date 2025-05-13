@@ -139,7 +139,12 @@ const AboutSection = () => {
             />
           </div>
         </div>
-      </section>
+     </section>
+      <div className="relative w-full h-40  flex items-center justify-center rounded-xl overflow-hidden bg-gradient-to-r from-pink-100 via-white to-pink-100/30">
+  <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 via-red-400 to-pink-600 drop-shadow-[3px_3px_0px_rgba(255,105,180,0.7)]">
+    Pavoyaa
+  </h1>
+</div>
     </>
   );
 };
