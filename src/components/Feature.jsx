@@ -123,7 +123,7 @@ const Feature = () => {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
               {howItWorks.map((step, idx) => (
                 <div key={idx} className="flex items-start p-4 rounded-md bg-gray-50 shadow-sm hover:shadow-md transition">
-                  <step.icon size={40} className="text-pink-500 flex-shrink-0" />
+                  <step.icon size={40} className="text-blue-900 flex-shrink-0" />
                   <div className="ml-4 text-left">
                     <h4 className="text-lg font-semibold">{step.title}</h4>
                     <p className="text-gray-600 text-sm mt-1">{step.description}</p>
