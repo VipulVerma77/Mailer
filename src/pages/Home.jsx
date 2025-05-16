@@ -29,8 +29,8 @@ export default function Home() {
           enterTo="opacity-75 scale-100"
           className="absolute right-65 top-1/3 w-100 h-100 md:block hidden" // Hide on mobile
         >
-          <div className="rounded-full border-4 border-pink-400">
-            <div className="animate-ping absolute inset-0 rounded-full bg-pink-400 opacity-75"></div>
+          <div className="rounded-full border-4 border-blue-900">
+            <div className="animate-ping absolute inset-0 rounded-full bg-blue-400 opacity-75"></div>
           </div>
         </Transition>
 

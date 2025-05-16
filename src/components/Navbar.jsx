@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
 import { ChevronDownIcon, ChevronUpIcon, EnvelopeIcon } from '@heroicons/react/24/outline';
 import { navLinks, authLinks } from '../config/navLink.js';
 import CustomButton from './CustomButton';
+import { logo } from '../assets/index.js';
 
 export default function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -27,11 +28,12 @@ export default function Navbar() {
           }`}
       >
         <div className="container mx-auto px-4 flex items-center justify-between">
-          <Link to="/" className="text-2xl font-semibold flex items-center space-x-2">
-            <EnvelopeIcon className="w-6 h-6 md:w-10 md:h-20 text-pink-600" />
+          <Link to="/" className=" font-semibold flex items-center space-x-2">
+            {/* <EnvelopeIcon className="w-6 h-6 md:w-10 md:h-20 text-pink-600" />
             <span className="text-pink-600 font-extrabold text-[calc(1.375rem+1.5vw)] leading-tight">
               Pavoyaa
-            </span>
+            </span> */}
+            <img src={logo} alt="company logio" height={10} width={250} />
           </Link>
 
           <nav className="hidden lg:flex items-center space-x-6">
@@ -42,7 +44,7 @@ export default function Navbar() {
                     key={item.label}
                     to={item.path}
                     className={`text-base font-normal transition-colors duration-500 ${isSticky ? 'py-2' : 'py-4'
-                      } text-gray-800 hover:text-pink-600`}
+                      } text-gray-800 hover:text-blue-900`}
                   >
                     {item.label}
                   </Link>
@@ -57,7 +59,7 @@ export default function Navbar() {
                   >
                     <button
                       className={`flex items-center text-base font-normal transition-all duration-500 ${isSticky ? 'py-2' : 'py-4'
-                        } text-gray-800 hover:text-pink-600`}
+                        } text-gray-800 hover:text-blue-900`}
                     >
                       {item.label}
                       <ChevronDownIcon className="ml-2 w-3 h-3" />
@@ -70,7 +72,7 @@ export default function Navbar() {
                         <Link
                           key={subItem.label}
                           to={subItem.path}
-                          className="block px-4 py-2 text-gray-700 hover:bg-pink-600 hover:text-white"
+                          className="block px-4 py-2 text-gray-700 hover:bg-blue-900 hover:text-white"
                           onClick={() => setDropdownOpen(false)}
                         >
                           {subItem.label}
@@ -91,9 +93,9 @@ export default function Navbar() {
                 <button
                   key={link.label}
                   onClick={() => setShowRegisterModal(true)}
-                  className=" px-4 py-2 text-base rounded-full font-medium border border-pink-600 text-pink-600
-      hover:bg-pink-600 hover:text-white
-      transition-all duration-300 cursor-pointer"
+                  className=" px-4 py-2 text-base rounded-full font-medium cursor-pointer  border border-blue-900 text-blue-900
+      hover:bg-blue-900 hover:text-white
+      transition-all duration-300"
                 >
                   {link.label}
                 </button>
@@ -126,7 +128,7 @@ export default function Navbar() {
                   <NavLink
                     key={item.label}
                     to={item.path}
-                    className="block py-3 px-2 text-gray-800 hover:bg-pink-50 rounded"
+                    className="block py-3 px-2 text-gray-800 hover:bg-blue-50 rounded"
                     onClick={() => setMobileOpen(false)}
                   >
                     {item.label}
@@ -137,7 +139,7 @@ export default function Navbar() {
                   <div key={item.label} className="mb-2">
                     <button
                       onClick={() => setDropdownOpen(!dropdownOpen)}
-                      className="w-full flex justify-between items-center py-3 px-2 text-gray-800 hover:bg-pink-50 rounded"
+                      className="w-full flex justify-between items-center py-3 px-2 text-gray-800 hover:bg-blue-50 rounded"
                     >
                       <span>{item.label}</span>
                       {dropdownOpen ? (
@@ -152,7 +154,7 @@ export default function Navbar() {
                           <Link
                             key={subItem.label}
                             to={subItem.path}
-                            className="block py-2 px-2 text-gray-600 hover:bg-pink-50 hover:text-pink-600 rounded"
+                            className="block py-2 px-2 text-gray-600 hover:bg-blue-50 hover:text-blue-900 rounded"
                             onClick={() => {
                               setMobileOpen(false);
                               setDropdownOpen(false);
@@ -175,7 +177,7 @@ export default function Navbar() {
                   <button
                     key={link.label}
                     onClick={() => setShowRegisterModal(true)}
-                    className="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700"
+                    className="w-full bg-blue-900 text-white py-2 rounded-md hover:bg-blue-700"
                   >
                     {link.label}
                   </button>
@@ -221,24 +223,24 @@ export default function Navbar() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-pink-100 p-6 text-left align-middle shadow-xl transition-all ">
-                  <Dialog.Title className="text-lg text-center font-medium leading-6 text-pink-600">
+                <Dialog.Panel className="w-full max-w-md transform overflow-hidden rounded-2xl bg-gray-100 p-6 text-left align-middle shadow-xl transition-all ">
+                  <Dialog.Title className="text-lg text-center font-medium leading-6 text-blue-900">
                     Register With Us
                   </Dialog.Title>
                   <form className="mt-4 space-y-4">
-                    <input type="text" placeholder="Name" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
-                    <input type="tel" placeholder="Phone" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
-                    <input type="email" placeholder="Email" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
-                    <input type="text" placeholder="Company Name" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-500 text-pink-500 placeholder-pink-400" />
+                    <input type="text" placeholder="Name" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-900 text-blue-900 placeholder-blue-900" />
+                    <input type="tel" placeholder="Phone" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-900 text-blue-900 placeholder-blue-900" />
+                    <input type="email" placeholder="Email" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-900 text-blue-900 placeholder-blue-900" />
+                    <input type="text" placeholder="Company Name" className="w-full border border-gray-300 bg-white rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-900 text-blue-900 placeholder-blue-900" />
                     <button
                       type="submit"
-                      className="w-full bg-pink-600 text-white py-2 rounded-md hover:bg-pink-700"
+                      className="w-full bg-blue-900 text-white py-2 rounded-md hover:bg-blue-1000 cursor-pointer"
                     >
                       Submit
                     </button>
                     <button
                       type="button"
-                      className="w-full border border-gray-300 text-gray-600 py-2 rounded-md hover:bg-gray-100"
+                      className="w-full border border-gray-300 text-gray-600 py-2 rounded-md hover:bg-gray-100 cursor-pointer"
                       onClick={() => setShowRegisterModal(false)}
                     >
                       Cancel

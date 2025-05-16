@@ -59,8 +59,8 @@ const AboutSection = () => {
 
       {/* Vision Section */}
       <div className="max-w-6xl mx-auto mb-10 px-4">
-        <div className="border border-gray-200 rounded-xl p-6 md:p-10 text-center bg-pink-100">
-          <h4 className="text-pink-500 font-semibold text-4xl md:text-7xl mb-4">
+        <div className="border border-gray-200 rounded-xl p-6 md:p-10 text-center bg-blue-200">
+          <h4 className="text-blue-900 font-semibold text-4xl md:text-7xl mb-4">
             Our Vision
           </h4>
           <p className="text-gray-600 text-2xl md:text-2xl max-w-4xl mx-auto">
@@ -72,7 +72,7 @@ const AboutSection = () => {
       </div>
 
       {/* Core Values Section */}
-      <section className=" py-16 bg-pink-100">
+      <section className=" py-16 bg-blue-200">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div className="animate-fadeInUp">
             <img
@@ -82,7 +82,7 @@ const AboutSection = () => {
             />
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-pink-600 mb-4">
+            <h3 className="text-3xl font-bold text-blue-900 mb-4">
               Our Core Values
             </h3>
             <ul className="space-y-4 text-lg text-gray-700">
@@ -101,8 +101,8 @@ const AboutSection = () => {
 
       {/* Mission Highlight */}
       <div className="max-w-6xl mx-auto mb-10 px-4">
-        <div className="border border-gray-200 rounded-xl p-6 md:p-10 text-center bg-pink-100">
-          <h4 className="text-pink-500 font-semibold text-4xl mb-4">
+        <div className="border border-gray-200 rounded-xl p-6 md:p-10 text-center bg-blue-200">
+          <h4 className="text-blue-900 font-semibold text-4xl mb-4">
             Effortless Payments. Unlimited Growth.
           </h4>
           <p className="text-gray-600 text-2xl max-w-4xl mx-auto">
@@ -118,7 +118,7 @@ const AboutSection = () => {
       <section className="bg-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h3 className="text-3xl font-bold text-pink-600 mb-4">
+            <h3 className="text-3xl font-bold text-blue-900 mb-4">
               Our Culture
             </h3>
             <p className="text-lg text-gray-700 mb-4">
@@ -140,8 +140,8 @@ const AboutSection = () => {
           </div>
         </div>
      </section>
-      <div className="relative w-full h-40  flex items-center justify-center rounded-xl overflow-hidden bg-gradient-to-r from-pink-100 via-white to-pink-100/30">
-  <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-pink-500 via-red-400 to-pink-600 drop-shadow-[3px_3px_0px_rgba(255,105,180,0.7)]">
+      <div className="relative w-full h-40  flex items-center justify-center rounded-xl overflow-hidden bg-gradient-to-r from-blue-200 via-white to-blue-100/30">
+  <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-500 via-red-400 to-blue-900 drop-shadow-[3px_3px_0px_rgba(255,105,180,0.7)]">
     Pavoyaa
   </h1>
 </div>

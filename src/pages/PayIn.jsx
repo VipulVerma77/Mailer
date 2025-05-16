@@ -7,9 +7,9 @@ const PayIn = () => {
         <div>
             <TopHeader text="Pay In" subText='Fast, secure UPI and wallet payments for web, app, and eCommerce.' />
             <div className="max-w-6xl mx-auto mb-10 px-4">
-                <div className="sparkle-border rounded-xl p-[2px] bg-pink-100">
-                    <div className="bg-pink-100 rounded-xl p-6 md:p-10 text-center relative z-10">
-                        <h4 className="text-pink-500 font-semibold text-4xl md:text-7xl mb-4">
+                <div className="sparkle-border rounded-xl p-[2px] bg-blue-200">
+                    <div className="bg-blue-200 rounded-xl p-6 md:p-10 text-center relative z-10">
+                        <h4 className="text-blue-900 font-semibold text-4xl md:text-7xl mb-4">
                             Pay In
                         </h4>
                         <p className="text-gray-600 text-2xl md:text-2xl max-w-4xl mx-auto">
@@ -31,14 +31,14 @@ const PayIn = () => {
 
                 {/* Right Content */}
                 <div className="md:w-1/2 w-full mb-10 md:mb-0 md:pl-12 text-center md:text-left">
-                    <p className="text-pink-500 font-semibold mb-2">The Power of Pay IN</p>
-                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
+                    <p className="text-red-900 font-semibold mb-2">The Power of Pay IN</p>
+                    <h2 className="text-3xl md:text-5xl font-bold text-blue-900 leading-tight">
                         Unlock Seamless Payments with Pay IN
                     </h2>
                     <p className="mt-6 text-gray-600 text-lg">
                         Discover the strength of smart, secure, and instant payments with Pay IN—your gateway to effortless transactions. Whether you're collecting payments from customers, managing subscriptions, or settling invoices, Pay IN makes it easy.
                         <br/>
-                       <p className='text-4xl mt-2 mb-2 '> Why Choose Pay IN?</p>
+                       <p className='text-4xl text-blue-800 mt-2 mb-2 '> Why Choose Pay IN?</p>
                         
                         Instant Settlements – Get paid in real-time.<br/>
                         Trusted Security – Industry-grade encryption and fraud protection.<br/>

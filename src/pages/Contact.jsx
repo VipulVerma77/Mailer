@@ -25,7 +25,7 @@ const Contact = () => {
     {/* Heading */}
     <div className="text-center max-w-3xl mx-auto mb-16">
       <h4 className="text-blue-600 mb-2 text-lg font-semibold"></h4>
-      <h1 className="text-4xl font-bold mb-4">Get In Touch With Us</h1>
+      <h1 className="text-4xl text-blue-900 font-bold mb-4">Get In Touch With Us</h1>
       <p className="text-gray-600">
         Connect with our team for support, collaboration, or to learn more about how Pavoyaa can help your business.
       </p>
@@ -39,7 +39,7 @@ const Contact = () => {
           { icon: <FaEnvelopeOpen />, title: "Email", text: "info@example.com" }]
           .map((item, idx) => (
             <div key={idx} className="flex items-center justify-start gap-4">
-              <div className="bg-gray-100 w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] rounded-full flex items-center justify-center text-pink-600 text-2xl sm:text-3xl">
+              <div className="bg-gray-100 w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] rounded-full flex items-center justify-center text-blue-900 text-2xl sm:text-3xl">
                 {item.icon}
               </div>
               <div className="ml-6">
@@ -51,12 +51,12 @@ const Contact = () => {
 
         {/* Social Icons */}
         <div className="flex items-center justify-start gap-4">
-          <div className="bg-gray-100 w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] rounded-full flex items-center justify-center text-pink-600 text-2xl sm:text-3xl">
+          <div className="bg-gray-100 w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] rounded-full flex items-center justify-center text-blue-900 text-2xl sm:text-3xl">
             <FaShare />
           </div>
           <div className="ml-6 flex space-x-3">
             {[FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn].map((Icon, i) => (
-              <a key={i} href="#" className="w-10 h-10 flex items-center justify-center bg-pink-600 text-white rounded-full hover:bg-pink-700 transition">
+              <a key={i} href="#" className="w-10 h-10 flex items-center justify-center bg-blue-900 text-white rounded-full hover:bg-pink-700 transition">
                 <Icon />
               </a>
             ))}
@@ -74,7 +74,7 @@ const Contact = () => {
           </div>
           <input type="text" placeholder="Subject" className="form-input w-full" />
           <textarea rows="6" placeholder="Message" className="form-input w-full"></textarea>
-          <button className="bg-pink-600 hover:bg-pink-700 text-white py-3 px-6 rounded w-full">
+          <button className="bg-blue-900 hover:bg-blue-700 text-white py-3 px-6 rounded w-full cursor-pointer">
             Send Message
           </button>
         </form>

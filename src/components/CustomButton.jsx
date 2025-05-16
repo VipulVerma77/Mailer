@@ -19,13 +19,13 @@ const CustomButton = ({
 
   const variantClasses = {
     outline: `
-      border border-pink-600 text-pink-600
-      hover:bg-pink-600 hover:text-white
+      border border-blue-900 text-blue-900
+      hover:bg-blue-900 hover:text-white
       transition-all duration-300
     `,
     solid: `
-      bg-pink-600 text-white
-      hover:bg-transparent hover:text-pink-600 hover:border hover:border-pink-600
+      bg-blue-900 text-white
+      hover:bg-transparent hover:text-blue-900 hover:border hover:border-blue-900
       transition-all duration-300
     `,
     ghost: `

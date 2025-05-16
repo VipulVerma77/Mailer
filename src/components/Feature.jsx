@@ -71,7 +71,7 @@ const Feature = () => {
   return (
     <div className="py-10 px-4 md:px-10 bg-white">
       <div className="max-w-6xl mx-auto text-center mb-10">
-        <h4 className="text-pink-500 font-semibold">Our Feature</h4>
+        <h4 className="text-blue-900 font-semibold">Our Feature</h4>
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           Important Features For Choose Us
         </h1>
@@ -86,7 +86,7 @@ const Feature = () => {
             clsx(
               "px-5 py-2 text-sm font-medium rounded-full transition",
               selected
-                ? "bg-pink-500 text-white"
+                ? "bg-blue-900 text-white"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             )
           }>
@@ -96,7 +96,7 @@ const Feature = () => {
             clsx(
               "px-5 py-2 text-sm font-medium rounded-full transition",
               selected
-                ? "bg-pink-500 text-white"
+                ? "bg-blue-900 text-white"
                 : "bg-gray-100 text-gray-700 hover:bg-gray-200"
             )
           }>
@@ -110,7 +110,7 @@ const Feature = () => {
               {features.map((item, idx) => (
                 <div key={idx} className="bg-gray-50 p-6 rounded-lg text-center shadow-sm hover:shadow-md transition">
                   <div className="inline-block bg-white p-4 rounded-full mb-4">
-                    <item.icon size={50} className="text-pink-500" />
+                    <item.icon size={50} className="text-blue-900" />
                   </div>
                   <h3 className="text-xl font-semibold">{item.title}</h3>
                   <p className="text-gray-600 mt-3">{item.description}</p>

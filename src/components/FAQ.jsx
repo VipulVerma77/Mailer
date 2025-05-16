@@ -30,7 +30,7 @@ const FAQ = () => {
     <div className="bg-gray-50 py-10 px-4 md:px-10">
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-pink-500 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
             Frequently Asked Questions (FAQs)
           </h2>
 

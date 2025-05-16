@@ -13,7 +13,7 @@ const PaymentOrch = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
                     {/* Text Content */}
                     <div>
-                        <h2 className="text-4xl font-extrabold text-gray-900 mb-4">
+                        <h2 className="text-4xl font-extrabold text-blue-900 mb-4">
                             Streamline Your Payments with Payment Orchestration
                         </h2>
                         <p className="text-lg text-gray-700 mb-6">
@@ -46,25 +46,25 @@ const PaymentOrch = () => {
 
             {/* Features Section */}
             <section className="bg-gray-100 py-16 px-6 md:px-12">
-                <h3 className="text-3xl font-bold text-center text-gray-900 mb-10">
+                <h3 className="text-3xl font-bold text-center text-blue-900 mb-10">
                     Key Benefits of Payment Orchestration
                 </h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                     {/* Feature 1 */}
-                    <div className="text-center p-6 bg-gradient-to-r from-pink-100 via-transparent to-pink-200 rounded-lg shadow-lg hover:bg-pink-50 transition-alll">
+                    <div className="text-center p-6 bg-gradient-to-r from-blue-200 via-transparent to-blue-300  rounded-lg shadow-lg hover:bg-pink-50 transition-alll">
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">Multi-Rail Support</h4>
                         <p className="text-gray-600">Accept payments from credit cards, UPI, wallets, and more—all through one integration.</p>
                     </div>
 
                     {/* Feature 2 */}
-                    <div className="text-center p-6 bg-gradient-to-r from-pink-100 via-transparent to-pink-200 rounded-lg shadow-lg hover:bg-pink-50 transition-all">
+                    <div className="text-center p-6 bg-gradient-to-r from-blue-200 via-transparent to-blue-300  rounded-lg shadow-lg hover:bg-pink-50 transition-all">
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">Intelligent Routing</h4>
                         <p className="text-gray-600">Reduce payment failures with dynamic routing and real-time transaction rerouting.</p>
                     </div>
 
                     {/* Feature 3 */}
-                    <div className="text-center p-6 bg-gradient-to-r from-pink-100 via-transparent to-pink-200 rounded-lg shadow-lg hover:bg-pink-50 transition-all">
+                    <div className="text-center p-6 bg-gradient-to-r from-blue-200 via-transparent to-blue-300 rounded-lg shadow-lg hover:bg-pink-50 transition-all">
                         <h4 className="text-xl font-semibold text-gray-900 mb-4">Real-Time Analytics</h4>
                         <p className="text-gray-600">Track payments and disbursements in real-time with an intuitive dashboard and detailed reports.</p>
                     </div>
@@ -72,7 +72,7 @@ const PaymentOrch = () => {
             </section>
 
             {/* Visual Showcase Section */}
-            <section className="py-16 px-6 bg-pink-100">
+            <section className="py-16 px-6 bg-blue-200">
                 <div className="text-center mb-12">
                     <h3 className="text-3xl font-bold text-gray-900">How Payment Orchestration Works</h3>
                     <p className="text-lg text-gray-600 mt-4">

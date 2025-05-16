@@ -7,13 +7,13 @@ import { CustomButton } from '../components';
 const services = [
   {
     title: 'Pay In',
-    icon: <FaMailBulk className="text-pink-500 text-5xl" />,
+    icon: <FaMailBulk className="text-blue-900 text-5xl" />,
     description:
       'Enable your business to receive payments through UPI and wallets with lightning-fast and top-tier security. Perfect for websites, apps, and eCommerce platforms.',
   },
   {
     title: 'Pay Out',
-    icon: <FaThumbsUp className="text-pink-500 text-5xl" />,
+    icon: <FaThumbsUp className="text-blue-900 text-5xl" />,
     description:
       'Automate bulk transfers, vendor payouts, refunds, commissions, and more—directly to bank accounts or wallets, anytime, anywhere instantly.',
   },
@@ -26,7 +26,7 @@ export default function Service() {
     <section className="w-full py-16 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <h4 className="text-pink-500 font-semibold mb-2">Our Service</h4>
+          <h4 className="text-blue-900 font-semibold mb-2">Our Service</h4>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">What We Can Do For You</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We simplify the way businesses collect and disburse money—securely, efficiently, and at scale.
