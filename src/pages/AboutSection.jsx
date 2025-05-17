@@ -33,7 +33,7 @@ const AboutSection = () => {
               className="w-full lg:w-1/2 animate-fadeInUp"
               style={{ animationDelay: "0.3s", animationFillMode: "both" }}
             >
-              <h4 className="text-pink-600 text-lg font-semibold mb-2">
+              <h4 className="text-blue-900 text-lg font-semibold mb-2">
                 Who we are
               </h4>
               <h1 className="text-4xl lg:text-5xl font-bold mb-6">

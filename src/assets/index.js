@@ -8,5 +8,5 @@ import team from './blog-1.png'
 import values from "./values.png"
 import payo from "./payo.png"
 import ques from "./ques.jpg"
-import logo from './logo.jpg'
+import logo from './logo.png'
 export {hero,sty,about,pay,auto,ease,team,values,payo,ques,logo};
