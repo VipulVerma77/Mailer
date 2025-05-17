@@ -1,6 +1,9 @@
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/24/solid";
-import { about, ques } from "../assets";
+import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+import { ques } from "../assets";
 
 const faqs = [
   {
@@ -26,9 +29,35 @@ const faqs = [
 ];
 
 const FAQ = () => {
+  // Controls for the fade/slide up animation
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold: 0.2, triggerOnce: true });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: { duration: 0.8, ease: "easeOut" },
+      });
+    }
+  }, [controls, inView]);
+
+  // Floating animation for the image (continuous up and down)
+  const floatingAnimation = {
+    y: [0, -15, 0],
+    transition: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+  };
+
   return (
-    <div className="bg-gray-50 py-10 px-4 md:px-10">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 30 }}
+      animate={controls}
+      className="bg-gray-50 py-10 px-4 md:px-10"
+    >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        {/* Left side FAQs */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-6">
             Frequently Asked Questions (FAQs)
@@ -47,9 +76,20 @@ const FAQ = () => {
                         }`}
                       />
                     </Disclosure.Button>
-                    <Disclosure.Panel className="px-4 pb-4 text-gray-600">
-                      {faq.answer}
-                    </Disclosure.Panel>
+
+                    <AnimatePresence initial={false}>
+                      {open && (
+                        <motion.div
+                          key="content"
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: "easeInOut" }}
+                        >
+                          <div className="px-4 pb-4 text-gray-600">{faq.answer}</div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 )}
               </Disclosure>
@@ -57,15 +97,20 @@ const FAQ = () => {
           </div>
         </div>
 
-        <div className="rounded overflow-hidden">
+        {/* Right side floating image */}
+        <motion.div
+          animate={floatingAnimation}
+          className="rounded overflow-hidden"
+          style={{ willChange: "transform" }}
+        >
           <img
             src={ques}
             alt="FAQ illustration"
             className="w-full h-auto rounded-md shadow-md"
           />
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

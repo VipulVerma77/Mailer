@@ -1,6 +1,6 @@
 import hero from "./hero-img-1.png"
 import sty from "./sty-1.png"
-import about from "./about-1.jpg";
+import about from "./about-1.png";
 import pay from "./Pay.png";
 import auto from './auto.jpg'
 import ease from './ease.jpg'

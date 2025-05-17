@@ -1,6 +1,30 @@
 import React from "react";
-import { about, team, values } from "../assets"; // make sure you have relevant images
+import { about, team, values } from "../assets";
 import { CustomButton, Feature, TopHeader } from "../components";
+import { motion } from "framer-motion";
+
+// Animation variants
+const fadeInUp = {
+  hidden: { opacity: 0, y: 60 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.6, ease: "easeOut" },
+  },
+};
+
+const imageVariant = {
+  hidden: { opacity: 0, y: 100 }, // start 100px below
+  visible: {
+    opacity: 1,
+    y: 0, // move to normal position
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
 
 const AboutSection = () => {
   return (
@@ -14,10 +38,13 @@ const AboutSection = () => {
       <div className="overflow-hidden py-10 mt-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            {/* Image Section */}
-            <div
-              className="w-full lg:w-1/2 animate-fadeInUp"
-              style={{ animationDelay: "0.1s", animationFillMode: "both" }}
+            {/* Image */}
+            <motion.div
+              className="w-full lg:w-1/2"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={imageVariant}
             >
               <div className="rotate-[-2deg] transition-transform hover:rotate-0">
                 <img
@@ -26,12 +53,16 @@ const AboutSection = () => {
                   className="w-full h-auto rounded shadow-md"
                 />
               </div>
-            </div>
+            </motion.div>
 
-            {/* Text Section */}
-            <div
-              className="w-full lg:w-1/2 animate-fadeInUp"
-              style={{ animationDelay: "0.3s", animationFillMode: "both" }}
+
+            {/* Text */}
+            <motion.div
+              className="w-full lg:w-1/2"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeInUp}
             >
               <h4 className="text-blue-900 text-lg font-semibold mb-2">
                 Who we are
@@ -52,36 +83,52 @@ const AboutSection = () => {
                 an enterprise or a growing startup, our solutions are designed
                 for adaptability and future scalability.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
 
       {/* Vision Section */}
-      <div className="max-w-6xl mx-auto mb-10 px-4">
+      <motion.div
+        className="max-w-6xl mx-auto mb-10 px-4"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         <div className="border border-gray-200 rounded-xl p-6 md:p-10 text-center bg-blue-200">
           <h4 className="text-blue-900 font-semibold text-4xl md:text-7xl mb-4">
             Our Vision
           </h4>
-          <p className="text-gray-600 text-2xl md:text-2xl max-w-4xl mx-auto">
+          <p className="text-gray-600 text-2xl max-w-4xl mx-auto">
             To be the foremost payment orchestration platform, consistently
             delivering cutting-edge, secure, and seamless solutions for global
             transactions.
           </p>
         </div>
-      </div>
+      </motion.div>
 
       {/* Core Values Section */}
-      <section className=" py-16 bg-blue-200">
+      <section className="py-16 bg-gray-200">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div className="animate-fadeInUp">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={imageVariant}
+          >
             <img
               src={values}
               alt="Core Values"
               className="w-full rounded-xl shadow-xl"
             />
-          </div>
-          <div>
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
             <h3 className="text-3xl font-bold text-blue-900 mb-4">
               Our Core Values
             </h3>
@@ -92,7 +139,7 @@ const AboutSection = () => {
               <li>💡 Simplicity – Making the complex feel effortless.</li>
               <li>💼 Partnership – We grow only when our clients grow.</li>
             </ul>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -100,7 +147,13 @@ const AboutSection = () => {
       <Feature />
 
       {/* Mission Highlight */}
-      <div className="max-w-6xl mx-auto mb-10 px-4">
+      <motion.div
+        className="max-w-6xl mx-auto mb-10 px-4"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
         <div className="border border-gray-200 rounded-xl p-6 md:p-10 text-center bg-blue-200">
           <h4 className="text-blue-900 font-semibold text-4xl mb-4">
             Effortless Payments. Unlimited Growth.
@@ -112,12 +165,17 @@ const AboutSection = () => {
             your ambitions for tomorrow.
           </p>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Team or Culture Section */}
+      {/* Team Section */}
       <section className="bg-gray-100 py-16">
         <div className="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
-          <div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeInUp}
+          >
             <h3 className="text-3xl font-bold text-blue-900 mb-4">
               Our Culture
             </h3>
@@ -130,24 +188,23 @@ const AboutSection = () => {
               From daily standups to global launches, our work is driven by
               purpose—and fun. Come innovate with us.
             </p>
-          </div>
-          <div className="animate-fadeInUp">
+          </motion.div>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={imageVariant}
+          >
             <img
               src={team}
               alt="Our Team"
               className="w-full rounded-xl shadow-xl"
             />
-          </div>
+          </motion.div>
         </div>
-     </section>
-      <div className="relative w-full h-40  flex items-center justify-center rounded-xl overflow-hidden bg-gradient-to-r from-blue-200 via-white to-blue-100/30">
-  <h1 className="text-5xl md:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-br from-blue-500 via-red-400 to-blue-900 drop-shadow-[3px_3px_0px_rgba(255,105,180,0.7)]">
-    Pavoyaa
-  </h1>
-</div>
+      </section>
     </>
   );
 };
 
 export default AboutSection;
-  

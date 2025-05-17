@@ -3,13 +3,14 @@ import { Dialog, Transition } from '@headlessui/react';
 import { useState } from 'react';
 import { FaMailBulk, FaThumbsUp } from 'react-icons/fa';
 import { CustomButton } from '../components';
+import { motion } from 'framer-motion'; // 👈 import framer motion
 
 const services = [
   {
     title: 'Pay In',
     icon: <FaMailBulk className="text-blue-900 text-5xl" />,
     description:
-      'Enable your business to receive payments through UPI and wallets with lightning-fast and top-tier security. Perfect for websites, apps, and eCommerce platforms.',
+      'Enable your business to receive payments through UPI and wallets with lightning-fast and top-tier security. Perfect for websites and eCommerce platforms.',
   },
   {
     title: 'Pay Out',
@@ -23,45 +24,51 @@ export default function Service() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="w-full py-16 bg-white">
+    <section className="w-full py-10 bg-white">
       <div className="max-w-6xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <h4 className="text-blue-900 font-semibold mb-2">Our Service</h4>
+        {/* Section Title */}
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <h4 className="text-blue-900 text-2xl font-semibold mb-2">Our Service</h4>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">What We Can Do For You</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
             We simplify the way businesses collect and disburse money—securely, efficiently, and at scale.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 justify-center">
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 justify-center max-w-3xl mx-auto">
           {services.map((service, index) => (
-            <div
+            <motion.div
               key={index}
-              className="bg-white text-center rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white text-center rounded-lg shadow-md p-6 hover:bg-blue-200 hover:shadow-xl transition-shadow duration-300"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              viewport={{ once: true }}
             >
-              <div className="bg-gray-100 rounded-full  p-6 inline-block mb-4">
+              <div className="bg-gray-100 rounded-full p-6 inline-block mb-4">
                 {service.icon}
               </div>
               <h4 className="text-xl font-semibold mb-4">{service.title}</h4>
               <p className="text-gray-600 mb-4">{service.description}</p>
               <CustomButton
-                    to={service.title === "Pay In" ? '/payin':'/payout'}
-                    label="Read More"
-                    variant="outline"
-                    size="medium"
-                    className="rounded-full"
-                  />
-              {/* <button
-                onClick={() => setIsOpen(true)}
-                className="text-primary border border-primary px-4 py-2 rounded-full hover:bg-primary hover:text-white transition"
-              >
-                Read More
-              </button> */}
-            </div>
+                to={service.title === "Pay In" ? '/payin' : '/payout'}
+                label="Read More"
+                variant="outline"
+                size="medium"
+                className="rounded-full"
+              />
+            </motion.div>
           ))}
         </div>
 
-        {/* Headless UI Dialog example */}
+        {/* Optional Dialog (unchanged) */}
         <Transition appear show={isOpen} as={Fragment}>
           <Dialog as="div" className="relative z-10" onClose={() => setIsOpen(false)}>
             <Transition.Child
@@ -96,7 +103,6 @@ export default function Service() {
                         This is an example of a modal using Headless UI. You can display more detailed content here.
                       </p>
                     </div>
-
                     <div className="mt-4">
                       <button
                         type="button"
