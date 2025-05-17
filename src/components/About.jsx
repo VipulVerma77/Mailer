@@ -16,7 +16,7 @@ export default function About() {
 
       {/* Right Content */}
       <div className="md:w-1/2 w-full mb-10 md:mb-0 md:pl-12 text-center md:text-left">
-        <p className="text-pink-500 font-semibold mb-2">About Us</p>
+        <p className="text-blue-900 font-semibold mb-2">About Us</p>
         <h2 className="text-3xl md:text-5xl font-bold text-gray-900 leading-tight">
           Powering the Future of Digital Payments
         </h2>
